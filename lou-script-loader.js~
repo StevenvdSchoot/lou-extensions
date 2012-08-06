@@ -318,7 +318,8 @@ window.onload = function () {
     document.getElementById("tip_text").innerHTML = TOD_Text;
     document.getElementById("tip_loading").innerHTML = TOD_Loading;
 
-    loader.downloadScript = { done:0, size:-1, data:new Array("window.qx={};qx.$$domReady = true;") };
+    loader.downloadScript = { done:0, size:-1, data:new Array() };
+    loader.downloadScript.data.push("window.qx={};qx.$$domReady = true;");
     loader.complete = false;
 
     if (loader.canHTML5Audio) {
